@@ -1,15 +1,18 @@
 package elements.api.ability
 
-import org.spongepowered.api.util.generator.dummy.DummyObjectProvider
+import org.spongepowered.api.Sponge
 
 object AbilityResults {
 
-    @JvmField
-    var OK = DummyObjectProvider.createFor(AbilityResult::class.java, "OK")
+    val OK: AbilityResult by lazy {
+        Sponge.getRegistry().getType(AbilityResult::class.java, "ok").get()
+    }
 
-    @JvmField
-    var CANCELLED = DummyObjectProvider.createFor(AbilityResult::class.java, "CANCELLED")
+    val CANCELLED: AbilityResult by lazy {
+        Sponge.getRegistry().getType(AbilityResult::class.java, "cancelled").get()
+    }
 
-    @JvmField
-    var ON_COOLDOWN = DummyObjectProvider.createFor(AbilityResult::class.java, "ON_COOLDOWN")
+    val ON_COOLDOWN: AbilityResult by lazy {
+        Sponge.getRegistry().getType(AbilityResult::class.java, "on_cooldown").get()
+    }
 }
