@@ -25,6 +25,13 @@ interface AbilityService {
     operator fun contains(abilityId: String): Boolean
 
     /**
+     * Gets a registered ability with the given id, if it exists.
+     *
+     * @return The ability, or null
+     */
+    operator fun get(abilityId: String): Ability?
+
+    /**
      * Registers the given ability with the given plugin.
      */
     fun register(plugin: Any, ability: Ability)
