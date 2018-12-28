@@ -7,6 +7,6 @@ import org.spongepowered.api.util.generator.dummy.DummyObjectProvider
 object EKeys {
 
     @JvmField
-    val SELECTED_ABILITIES: Key<ListValue<String>> =
+    var SELECTED_ABILITIES: Key<ListValue<String>> =
         DummyObjectProvider.createExtendedFor(Key::class.java, "SELECTED_ABILITY")
 }
