@@ -33,5 +33,5 @@ interface AbilityService {
     /**
      * Registers the given ability with the given plugin.
      */
-    fun register(plugin: Any, ability: Ability)
+    fun register(ability: Ability)
 }
