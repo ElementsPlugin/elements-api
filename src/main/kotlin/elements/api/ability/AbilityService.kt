@@ -1,6 +1,5 @@
-package elements.api.ability.service
+package elements.api.ability
 
-import elements.api.ability.Ability
 import org.spongepowered.api.Sponge
 
 interface AbilityService {

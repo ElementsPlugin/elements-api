@@ -2,17 +2,18 @@ package elements.api.ability
 
 import elements.api.Element
 import elements.api.activator.Activator
+import org.spongepowered.api.CatalogType
 import org.spongepowered.api.entity.living.player.Player
 import org.spongepowered.api.text.Text
 import sporoutines.CoroutineTaskManager
 
 typealias AbilityExecutor = suspend CoroutineTaskManager.(Player) -> AbilityResult
 
-interface Ability {
+interface Ability : CatalogType {
 
-    val id: String
+    override fun getId(): String
 
-    val name: Text
+    override fun getName(): String
 
     val description: Text
 
