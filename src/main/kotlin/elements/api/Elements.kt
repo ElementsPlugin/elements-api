@@ -11,23 +11,23 @@ object Elements {
      * Airbending.
      */
     @JvmField
-    var AIR = dummy<Element>("AIR")
+    val AIR = dummy<Element>("AIR")
 
     /**
      * Earthbending.
      */
     @JvmField
-    var EARTH = dummy<Element>("EARTH")
+    val EARTH = dummy<Element>("EARTH")
 
     /**
      * Firebending.
      */
     @JvmField
-    var FIRE = dummy<Element>("FIRE")
+    val FIRE = dummy<Element>("FIRE")
 
     /**
      * Waterbending.
      */
     @JvmField
-    var WATER = dummy<Element>("WATER")
+    val WATER = dummy<Element>("WATER")
 }
