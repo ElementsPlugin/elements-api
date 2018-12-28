@@ -11,23 +11,23 @@ object Activators {
      * The ability activates when the player left clicks.
      */
     @JvmField
-    val LEFT_CLICK = dummy<Activator>("LEFT_CLICK")
+    var LEFT_CLICK = dummy<Activator>("LEFT_CLICK")
 
     /**
      * The ability activates when the player right clicks.
      */
     @JvmField
-    val RIGHT_CLICK = dummy<Activator>("RIGHT_CLICK")
+    var RIGHT_CLICK = dummy<Activator>("RIGHT_CLICK")
 
     /**
      * The ability activates when the player sneaks.
      */
     @JvmField
-    val SNEAK = dummy<Activator>("SNEAK")
+    var SNEAK = dummy<Activator>("SNEAK")
 
     /**
      * The ability activates when the player sprints.
      */
     @JvmField
-    val SPRINT = dummy<Activator>("SPRINT")
+    var SPRINT = dummy<Activator>("SPRINT")
 }
