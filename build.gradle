@@ -23,7 +23,7 @@ dependencies {
 
     compile 'org.spongepowered:spongeapi:7.1.0'
 
-    compile 'com.github.ElementsPlugin:Sporoutines:1.0.0'
+    compile 'com.github.ElementsPlugin:Sporoutines:51d972776e'
 }
 
 compileKotlin {
