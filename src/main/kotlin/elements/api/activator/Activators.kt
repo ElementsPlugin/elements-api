@@ -38,4 +38,12 @@ object Activators {
      */
     @JvmField
     var JOIN = dummy<Activator>("JOIN")
+
+    /**
+     * The ability activates when the player selects it.
+     *
+     * This is useful for passives that operate in a continuous loop.
+     */
+    @JvmField
+    var SELECT = dummy<Activator>("SELECT")
 }
