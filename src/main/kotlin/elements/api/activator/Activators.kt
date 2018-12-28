@@ -30,4 +30,12 @@ object Activators {
      */
     @JvmField
     var SPRINT = dummy<Activator>("SPRINT")
+
+    /**
+     * The ability activates when the player joins the game.
+     *
+     * This is useful for passives that operate in a continuous loop.
+     */
+    @JvmField
+    var JOIN = dummy<Activator>("JOIN")
 }
