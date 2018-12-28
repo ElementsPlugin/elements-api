@@ -1,18 +1,13 @@
 package elements.api.ability
 
-import org.spongepowered.api.Sponge
+import elements.api.util.ext.getValue
+import elements.api.util.ext.registry
 
 object AbilityResults {
 
-    val OK: AbilityResult by lazy {
-        Sponge.getRegistry().getType(AbilityResult::class.java, "ok").get()
-    }
+    val OK: AbilityResult by registry
 
-    val CANCELLED: AbilityResult by lazy {
-        Sponge.getRegistry().getType(AbilityResult::class.java, "cancelled").get()
-    }
+    val CANCELLED: AbilityResult by registry
 
-    val ON_COOLDOWN: AbilityResult by lazy {
-        Sponge.getRegistry().getType(AbilityResult::class.java, "on_cooldown").get()
-    }
+    val ON_COOLDOWN: AbilityResult by registry
 }

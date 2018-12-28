@@ -1,49 +1,45 @@
 package elements.api.activator
 
 import elements.api.util.dummy
+import elements.api.util.ext.getValue
+import elements.api.util.ext.registry
 
 /**
  * The standard ability activators.
  */
-object Activators {
+object StandardActivators {
 
     /**
      * The ability activates when the player left clicks.
      */
-    @JvmField
-    var LEFT_CLICK = dummy<Activator>("LEFT_CLICK")
+    val LEFT_CLICK: Activator by registry
 
     /**
      * The ability activates when the player right clicks.
      */
-    @JvmField
-    var RIGHT_CLICK = dummy<Activator>("RIGHT_CLICK")
+    val RIGHT_CLICK: Activator by registry
 
     /**
      * The ability activates when the player sneaks.
      */
-    @JvmField
-    var SNEAK = dummy<Activator>("SNEAK")
+    val SNEAK: Activator by registry
 
     /**
      * The ability activates when the player sprints.
      */
-    @JvmField
-    var SPRINT = dummy<Activator>("SPRINT")
+    val SPRINT: Activator by registry
 
     /**
      * The ability activates when the player joins the game.
      *
      * This is useful for passives that operate in a continuous loop.
      */
-    @JvmField
-    var JOIN = dummy<Activator>("JOIN")
+    val JOIN: Activator by registry
 
     /**
      * The ability activates when the player selects it.
      *
      * This is useful for passives that operate in a continuous loop.
      */
-    @JvmField
-    var SELECT = dummy<Activator>("SELECT")
+    val SELECT: Activator by registry
 }
