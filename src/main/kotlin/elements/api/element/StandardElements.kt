@@ -1,4 +1,4 @@
-package elements.api
+package elements.api.element
 
 import elements.api.util.ext.getValue
 import elements.api.util.ext.registry

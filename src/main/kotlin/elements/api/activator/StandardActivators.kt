@@ -1,6 +1,5 @@
 package elements.api.activator
 
-import elements.api.util.dummy
 import elements.api.util.ext.getValue
 import elements.api.util.ext.registry
 

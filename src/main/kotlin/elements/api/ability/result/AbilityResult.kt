@@ -1,4 +1,4 @@
-package elements.api.ability
+package elements.api.ability.result
 
 import org.spongepowered.api.CatalogType
 

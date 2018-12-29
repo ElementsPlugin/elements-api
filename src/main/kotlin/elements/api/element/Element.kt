@@ -1,4 +1,4 @@
-package elements.api
+package elements.api.element
 
 import org.spongepowered.api.CatalogType
 import org.spongepowered.api.text.format.TextColor

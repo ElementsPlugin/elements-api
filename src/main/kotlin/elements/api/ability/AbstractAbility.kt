@@ -1,12 +1,14 @@
 package elements.api.ability
 
-import elements.api.Element
+import elements.api.element.Element
+import elements.api.ability.result.AbilityResult
 import org.spongepowered.api.entity.living.player.Player
 import org.spongepowered.api.text.Text
 import sporoutines.CoroutineTaskManager
 
 abstract class AbstractAbility(private val id: String, private val name: String, override val description: Text,
-                               override val element: Element) : Ability {
+                               override val element: Element
+) : Ability {
 
     override fun getId(): String = id
 

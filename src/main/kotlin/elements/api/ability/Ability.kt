@@ -1,6 +1,7 @@
 package elements.api.ability
 
-import elements.api.Element
+import elements.api.element.Element
+import elements.api.ability.result.AbilityResult
 import elements.api.activator.Activator
 import org.spongepowered.api.CatalogType
 import org.spongepowered.api.entity.living.player.Player
