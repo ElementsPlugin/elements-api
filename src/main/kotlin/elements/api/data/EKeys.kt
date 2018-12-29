@@ -9,5 +9,5 @@ object EKeys {
 
     @JvmField
     var SELECTED_ABILITIES: Key<ListValue<Ability>> =
-        DummyObjectProvider.createExtendedFor(Key::class.java, "SELECTED_ABILITY")
+        DummyObjectProvider.createExtendedFor(Key::class.java, "SELECTED_ABILITIES")
 }

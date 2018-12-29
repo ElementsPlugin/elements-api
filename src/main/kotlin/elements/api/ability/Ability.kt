@@ -8,8 +8,6 @@ import org.spongepowered.api.entity.living.player.Player
 import org.spongepowered.api.text.Text
 import sporoutines.CoroutineTaskManager
 
-typealias AbilityExecutor = suspend CoroutineTaskManager.(Player) -> AbilityResult
-
 interface Ability : CatalogType {
 
     override fun getId(): String
