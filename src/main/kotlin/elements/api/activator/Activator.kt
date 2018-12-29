@@ -16,4 +16,6 @@ interface Activator : CatalogType {
      * @return True if the registration was successful
      */
     fun register(ability: Ability): Boolean
+
+    val registeredAbilities: Collection<Ability>
 }
