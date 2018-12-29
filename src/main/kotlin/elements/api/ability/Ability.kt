@@ -21,4 +21,6 @@ interface Ability : CatalogType {
     val activator: Activator
 
     suspend fun CoroutineTaskManager.execute(player: Player): AbilityResult
+
+    fun checkPermission(player: Player): Boolean = player.hasPermission("elements.ability.$id")
 }
