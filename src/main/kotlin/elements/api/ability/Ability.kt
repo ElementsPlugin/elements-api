@@ -1,6 +1,7 @@
 package elements.api.ability
 
 import elements.api.Element
+import elements.api.activator.Activator
 import org.spongepowered.api.CatalogType
 import org.spongepowered.api.entity.living.player.Player
 import org.spongepowered.api.text.Text
@@ -17,6 +18,8 @@ interface Ability : CatalogType {
     val description: Text
 
     val element: Element
+
+    val activator: Activator
 
     suspend fun CoroutineTaskManager.execute(player: Player): AbilityResult
 }
