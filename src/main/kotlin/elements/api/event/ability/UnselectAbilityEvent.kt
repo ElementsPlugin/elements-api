@@ -1,3 +1,5 @@
 package elements.api.event.ability
 
-interface UnselectAbilityEvent : AbilityEvent
+import org.spongepowered.api.event.Cancellable
+
+interface UnselectAbilityEvent : AbilityEvent, Cancellable
