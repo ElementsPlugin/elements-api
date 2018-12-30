@@ -51,6 +51,9 @@ object ActivatorListener {
 
                 // Remove it from the list.
                 waitMap.remove(player.uniqueId, continuation)
+
+                // Found the corresponding suspended executor, so we shouldn't check anything else.
+                break
             }
         }
     }
