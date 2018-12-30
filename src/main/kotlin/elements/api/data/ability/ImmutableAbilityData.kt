@@ -1,10 +1,12 @@
 package elements.api.data.ability
 
 import elements.api.ability.Ability
-import org.spongepowered.api.data.manipulator.immutable.ImmutableListData
-import org.spongepowered.api.data.value.immutable.ImmutableListValue
+import elements.api.activator.Activator
+import org.spongepowered.api.data.manipulator.immutable.ImmutableMappedData
+import org.spongepowered.api.data.value.immutable.ImmutableMapValue
 
-interface ImmutableAbilityData : ImmutableListData<Ability, ImmutableAbilityData, AbilityData> {
+interface ImmutableAbilityData :
+    ImmutableMappedData<Int, MutableMap<Activator, Ability>, ImmutableAbilityData, AbilityData> {
 
-    val selected: ImmutableListValue<Ability>
+    val slots: ImmutableMapValue<Int, MutableMap<Activator, Ability>>
 }

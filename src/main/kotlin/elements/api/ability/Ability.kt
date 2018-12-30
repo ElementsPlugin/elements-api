@@ -18,7 +18,7 @@ interface Ability : CatalogType {
 
     val element: Element
 
-    val activator: Activator
+    val activators: Set<Activator>
 
     suspend fun CoroutineTaskManager.execute(player: Player): AbilityResult
 

@@ -2,4 +2,7 @@ package elements.api.event.ability
 
 import org.spongepowered.api.event.Cancellable
 
-interface SelectAbilityEvent : AbilityEvent, Cancellable
+interface BindAbilityEvent : AbilityEvent, Cancellable {
+
+    val slot: Int
+}
