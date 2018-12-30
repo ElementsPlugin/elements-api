@@ -4,19 +4,23 @@ import org.spongepowered.api.command.CommandSource
 import org.spongepowered.api.item.inventory.ItemStackSnapshot
 import org.spongepowered.api.text.Text
 import org.spongepowered.api.text.action.TextActions
+import org.spongepowered.api.text.format.TextColor
 import org.spongepowered.api.text.format.TextColors
+import org.spongepowered.api.text.format.TextStyle
 import org.spongepowered.api.text.format.TextStyles
 import java.net.URL
 
 fun Iterable<Text>.join(): Text = Text.join(this)
 infix fun Iterable<Text>.joinWith(separator: Text): Text = Text.joinWith(separator, this)
 
-
 operator fun Text.plus(other: Text): Text = Text.of(this, other)
 operator fun Text.plus(other: String): Text = Text.of(this, other)
 
 fun String.text(): Text = Text.of(this)
 fun String.newText(): Text.Builder = Text.builder(this)
+
+infix fun String.color(color: TextColor): Text = newText().color(color).build()
+infix fun String.style(style: TextStyle): Text = newText().style(style).build()
 
 fun String.black(): Text = newText().color(TextColors.BLACK).build()
 fun String.darkBlue(): Text = newText().color(TextColors.DARK_BLUE).build()
@@ -66,13 +70,13 @@ fun Text.Builder.strikethrough(): Text.Builder = style(TextStyles.STRIKETHROUGH)
 fun Text.Builder.underline(): Text.Builder = style(TextStyles.UNDERLINE)
 fun Text.Builder.italic(): Text.Builder = style(TextStyles.ITALIC)
 
-fun Text.Builder.runCommand(command: String): Text.Builder = onClick(TextActions.runCommand(command))
-fun Text.Builder.suggestCommand(command: String): Text.Builder = onClick(TextActions.suggestCommand(command))
-fun Text.Builder.openUrl(url: URL): Text.Builder = onClick(TextActions.openUrl(url))
-fun Text.Builder.execute(block: (CommandSource) -> Unit): Text.Builder = onClick(TextActions.executeCallback(block))
-fun Text.Builder.changePage(page: Int): Text.Builder = onClick(TextActions.changePage(page))
+infix fun Text.Builder.runCommand(command: String): Text.Builder = onClick(TextActions.runCommand(command))
+infix fun Text.Builder.suggestCommand(command: String): Text.Builder = onClick(TextActions.suggestCommand(command))
+infix fun Text.Builder.openUrl(url: URL): Text.Builder = onClick(TextActions.openUrl(url))
+infix fun Text.Builder.execute(block: (CommandSource) -> Unit): Text.Builder = onClick(TextActions.executeCallback(block))
+infix fun Text.Builder.changePage(page: Int): Text.Builder = onClick(TextActions.changePage(page))
 
-fun Text.Builder.insertText(text: String): Text.Builder = onShiftClick(TextActions.insertText(text))
+infix fun Text.Builder.insertText(text: String): Text.Builder = onShiftClick(TextActions.insertText(text))
 
-fun Text.Builder.showText(text: Text): Text.Builder = onHover(TextActions.showText(text))
-fun Text.Builder.showItem(item: ItemStackSnapshot): Text.Builder = onHover(TextActions.showItem(item))
+infix fun Text.Builder.showText(text: Text): Text.Builder = onHover(TextActions.showText(text))
+infix fun Text.Builder.showItem(item: ItemStackSnapshot): Text.Builder = onHover(TextActions.showItem(item))
