@@ -14,7 +14,7 @@ object EKeys {
         DummyObjectProvider.createExtendedFor(Key::class.java, "SELECTED_ABILITIES")
 
     @JvmField
-    var ABILITY_SLOTS: Key<MapValue<Int, Map<Activator, Ability>>> =
+    var ABILITY_SLOTS: Key<ListValue<Map<Activator, Ability>>> =
             DummyObjectProvider.createExtendedFor(Key::class.java, "ABILITY_SLOTS")
 
 }
