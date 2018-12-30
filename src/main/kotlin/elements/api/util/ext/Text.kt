@@ -8,6 +8,10 @@ import org.spongepowered.api.text.format.TextColors
 import org.spongepowered.api.text.format.TextStyles
 import java.net.URL
 
+fun Iterable<Text>.join(): Text = Text.join(this)
+infix fun Iterable<Text>.joinWith(separator: Text): Text = Text.joinWith(separator, this)
+
+
 operator fun Text.plus(other: Text): Text = Text.of(this, other)
 operator fun Text.plus(other: String): Text = Text.of(this, other)
 
