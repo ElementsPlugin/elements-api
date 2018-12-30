@@ -20,7 +20,7 @@ interface Ability : CatalogType {
 
     val activators: Set<Activator>
 
-    suspend fun CoroutineTaskManager.execute(player: Player): AbilityResult
+    suspend fun CoroutineTaskManager.execute(player: Player, activator: Activator): AbilityResult
 
     fun checkPermission(player: Player): Boolean =
         player.hasPermission("elements.ability.$id") && player.hasPermission("elements.element.${element.id}")
