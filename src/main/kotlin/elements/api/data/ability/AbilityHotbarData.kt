@@ -6,7 +6,7 @@ import org.spongepowered.api.data.manipulator.mutable.MappedData
 import org.spongepowered.api.data.value.mutable.MapValue
 
 interface AbilityHotbarData :
-    MappedData<Int, Map<Activator, Ability>, AbilityHotbarData, ImmutableAbilityHotbarData> {
+    MappedData<Int, MutableMap<Activator, Ability>, AbilityHotbarData, ImmutableAbilityHotbarData> {
 
-    val abilitySlots: MapValue<Int, Map<Activator, Ability>>
+    val abilitySlots: MapValue<Int, MutableMap<Activator, Ability>>
 }

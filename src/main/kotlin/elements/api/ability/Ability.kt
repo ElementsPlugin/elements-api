@@ -22,5 +22,6 @@ interface Ability : CatalogType {
 
     suspend fun CoroutineTaskManager.execute(player: Player): AbilityResult
 
-    fun checkPermission(player: Player): Boolean = player.hasPermission("elements.ability.$id")
+    fun checkPermission(player: Player): Boolean =
+        player.hasPermission("elements.ability.$id") && player.hasPermission("elements.element.${element.id}")
 }
