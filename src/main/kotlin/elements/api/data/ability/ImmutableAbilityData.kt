@@ -1,10 +1,9 @@
 package elements.api.data.ability
 
-import org.spongepowered.api.data.manipulator.immutable.ImmutableMappedData
-import org.spongepowered.api.data.value.immutable.ImmutableMapValue
+import org.spongepowered.api.data.manipulator.immutable.ImmutableListData
+import org.spongepowered.api.data.value.immutable.ImmutableListValue
 
-interface ImmutableAbilityData :
-    ImmutableMappedData<Int, SlotInfo, ImmutableAbilityData, AbilityData> {
+interface ImmutableAbilityData : ImmutableListData<SlotInfo, ImmutableAbilityData, AbilityData> {
 
-    val slots: ImmutableMapValue<Int, SlotInfo>
+    val slots: ImmutableListValue<SlotInfo>
 }
