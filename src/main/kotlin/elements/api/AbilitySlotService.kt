@@ -13,4 +13,6 @@ interface AbilitySlotService {
     operator fun get(player: Player, slot: Int, activator: Activator): Ability?
 
     operator fun set(player: Player, slot: Int, activator: Activator, ability: Ability?)
+
+    fun contains(player: Player, slot: Int, ability: Ability): Boolean
 }
