@@ -23,8 +23,6 @@ dependencies {
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0"
 
     compile 'org.spongepowered:spongeapi:7.1.0'
-
-    compile 'com.github.ElementsPlugin:Sporoutines:51d972776e'
 }
 
 compileKotlin {
