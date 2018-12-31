@@ -29,16 +29,7 @@ object StandardActivators {
     val SPRINT: Activator by registry
 
     /**
-     * The ability activates when the player joins the game.
-     *
-     * This is useful for passives that operate in a continuous loop.
+     * The ability activates when the player selects its slot.
      */
-    val JOIN: Activator by registry
-
-    /**
-     * The ability activates when the player selects it.
-     *
-     * This is useful for passives that operate in a continuous loop.
-     */
-    val SELECT: Activator by registry
+    val PASSIVE: Activator by registry
 }
