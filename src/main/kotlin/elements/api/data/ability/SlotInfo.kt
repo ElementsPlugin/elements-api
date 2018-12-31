@@ -6,7 +6,5 @@ import org.spongepowered.api.data.DataSerializable
 
 interface SlotInfo : DataSerializable {
 
-    val slot: Int
-
     val abilities: MutableMap<Activator, Ability>
 }
